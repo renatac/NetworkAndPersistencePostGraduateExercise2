@@ -50,7 +50,6 @@ class AddEditViewController: UIViewController {
             btAddEdit.setTitle("Alterar", for: .normal)
         }
         
-        
         // 1 criamos uma toolbar e adicionamos como input do textview
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         toolbar.tintColor = UIColor(named: "main")
@@ -66,7 +65,7 @@ class AddEditViewController: UIViewController {
     }
     
     func loadBrands() {
-        REST.loadBrands(onComplete: { (brands) in
+        ALAMOFIRE.loadBrands(onComplete: { (brands) in
             guard let brands = brands else {return}
             
             // ascending order
@@ -115,7 +114,7 @@ class AddEditViewController: UIViewController {
     // MARK: - IBActions
     fileprivate func addCar() {
         // new car
-        REST.save(car: car) { (success) in
+        ALAMOFIRE.save(car: car) { (success) in
             if success {
                 self.goBack()
             } else {
@@ -129,7 +128,7 @@ class AddEditViewController: UIViewController {
     
     fileprivate func updateCar() {
         // 2 - edit current car
-        REST.update(car: car) { (success) in
+        ALAMOFIRE.update(car: car) { (success) in
             if success {
                 self.goBack()
             } else {
@@ -165,7 +164,6 @@ class AddEditViewController: UIViewController {
         
     }
     
-    
     // 2 - essa função pode fazer um Back na navegação da Navigation Control
     func goBack() {
         
@@ -174,7 +172,6 @@ class AddEditViewController: UIViewController {
         }
         
     }
-    
     
     func showAlert(withTitle titleMessage: String, withMessage message: String, isTryAgain hasRetry: Bool, operation oper: CarOperationAction) {
         

@@ -6,7 +6,6 @@
 //  Copyright © 2021 Eric Brito. All rights reserved.
 //
 
-
 import Alamofire
 import Foundation
 
@@ -25,7 +24,7 @@ enum RESTOperation {
     case delete
 }
 
-class REST {
+class ALAMOFIRE {
     
     // URL + endpoint
     private static let basePath = "https://carangas.herokuapp.com/cars"
@@ -45,17 +44,46 @@ class REST {
         return config
     }()
     
+    private class func errorHandler(error: CarError) {
+        var response: String = ""
+        
+        switch error {
+        case .invalidJSON:
+            response = "invalidJSON"
+        case .noData:
+            response = "noData"
+        case .noResponse:
+            response = "noResponse"
+        case .url:
+            response = "JSON inválido"
+        case .taskError(let error):
+            response = "\(error.localizedDescription)"
+        case .responseStatusCode(let code):
+            if code != 200 {
+                response = "Algum problema com o servidor. :( \nError:\(code)"
+            }
+        }
+        
+        print(response)
+        
+    }
     
     class func delete(car: Car, onComplete: @escaping (Bool) -> Void ) {
-        applyOperation(car: car, operation: .delete, onComplete: onComplete)
+        applyOperation(car: car, operation: .delete, onComplete: onComplete)   { (error) in
+            errorHandler(error: error)
+        }
     }
     
     class func update(car: Car, onComplete: @escaping (Bool) -> Void ) {
-        applyOperation(car: car, operation: .update, onComplete: onComplete)
+        applyOperation(car: car, operation: .update, onComplete: onComplete) { (error) in
+            errorHandler(error: error)
+        }
     }
     
     class func save(car: Car, onComplete: @escaping (Bool) -> Void ) {
-        applyOperation(car: car, operation: .save, onComplete: onComplete)
+        applyOperation(car: car, operation: .save, onComplete: onComplete) { (error) in
+            errorHandler(error: error)
+        }
     }
     
     // o metodo pode retornar um array de nil se tiver algum erro
@@ -68,12 +96,12 @@ class REST {
         
         AF.request(url).responseJSON {  response in
             
-         if response.error != nil {
+            if response.error != nil {
                 print(response.error.debugDescription)
                 onError(.taskError(error: response.error!))
             } else {
-               switch response.result {
-               case .success( _):
+                switch response.result {
+                case .success( _):
                     // servidor respondeu com sucesso :)
                     guard let data = response.data else {
                         // ERROR porque o data é invalido
@@ -101,19 +129,19 @@ class REST {
     
     class func loadCars(onComplete: @escaping ([Car]) -> Void, onError: @escaping (CarError) -> Void) {
         
-        guard let url = URL(string: REST.basePath) else {
+        guard let url = URL(string: ALAMOFIRE.basePath) else {
             onError(.url)
             return
         }
         
         AF.request(url).responseJSON {  response in
             
-         if response.error != nil {
+            if response.error != nil {
                 print(response.error.debugDescription)
                 onError(.taskError(error: response.error!))
             } else {
-               switch response.result {
-               case .success( _):
+                switch response.result {
+                case .success( _):
                     // servidor respondeu com sucesso :)
                     guard let data = response.data else {
                         // ERROR porque o data é invalido
@@ -134,12 +162,11 @@ class REST {
                     onError(.responseStatusCode(code: 500))
                 }
             }
-            
-        }
+        } //fim do loadCars
+ 
     }
-
     
-    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void ) {
+    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void ) {
         
         // o endpoint do servidor para update é: URL/id
         let urlString = basePath + "/" + (car._id ?? "")
@@ -175,8 +202,6 @@ class REST {
                     onComplete(false)
                     return
                 }
-                
-                // ok
                 onComplete(true)
                 
             } else {

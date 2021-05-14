@@ -33,7 +33,7 @@ class CarsTableViewController: UITableViewController {
     
     @objc func loadData() {
         
-        REST.loadCars(onComplete: { (cars) in
+        ALAMOFIRE.loadCars(onComplete: { (cars) in
             
             self.cars = cars
             
@@ -59,7 +59,6 @@ class CarsTableViewController: UITableViewController {
                     self.tableView.reloadData()
                 }
             }
-            
             
         }) { (error) in
             
@@ -148,7 +147,7 @@ class CarsTableViewController: UITableViewController {
             
             let car = cars[indexPath.row]
             
-            REST.delete(car: car) { success in
+            ALAMOFIRE.delete(car: car) { success in
                 if success {
                     // remover da estrutura local antes de atualizar
                     self.cars.remove(at: indexPath.row)
