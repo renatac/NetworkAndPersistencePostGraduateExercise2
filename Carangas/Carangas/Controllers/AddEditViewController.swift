@@ -15,7 +15,7 @@ enum CarOperationAction {
 }
 
 class AddEditViewController: UIViewController {
-
+    
     var car: Car!
     
     // estrutura para guardar as marcas da tabela FIPE
@@ -37,7 +37,7 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var scGasType: UISegmentedControl!
     @IBOutlet weak var btAddEdit: UIButton!
     @IBOutlet weak var loading: UIActivityIndicatorView!
-
+    
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,13 +61,12 @@ class AddEditViewController: UIViewController {
         
         tfBrand.inputAccessoryView = toolbar
         tfBrand.inputView = pickerView
- 
+        
         loadBrands()
     }
     
     func loadBrands() {
-        
-        REST.loadBrands { (brands) in
+        REST.loadBrands(onComplete: { (brands) in
             guard let brands = brands else {return}
             
             // ascending order
@@ -76,9 +75,32 @@ class AddEditViewController: UIViewController {
             DispatchQueue.main.async {
                 self.pickerView.reloadAllComponents()
             }
+            
+        }) { (error) in
+            
+            var response: String = ""
+            
+            switch error {
+            case .invalidJSON:
+                response = "invalidJSON"
+            case .noData:
+                response = "noData"
+            case .noResponse:
+                response = "noResponse"
+            case .url:
+                response = "JSON inválido"
+            case .taskError(let error):
+                response = "\(error.localizedDescription)"
+            case .responseStatusCode(let code):
+                if code != 200 {
+                    response = "Algum problema com o servidor. :( \nError:\(code)"
+                }
+            }
+            
+            print(response)
+            
         }
     }
-    
     
     // Precisamos adicionar dois selectors para serem usados pela toolbar :
     @objc func cancel() {
@@ -133,7 +155,7 @@ class AddEditViewController: UIViewController {
         }
         car.price = Double(tfPrice.text!)!
         car.gasType = scGasType.selectedSegmentIndex
-            
+        
         // 1 diferenciar se estamos salvando (SAVE) ou editando (UPDATE)
         if car._id == nil {
             addCar()
@@ -169,12 +191,12 @@ class AddEditViewController: UIViewController {
             let tryAgainAction = UIAlertAction(title: "Tentar novamente", style: .default, handler: {(action: UIAlertAction) in
                 
                 switch oper {
-                    case .add_car:
-                        self.addCar()
-                    case .edit_car:
-                        self.updateCar()
-                    case .get_brands:
-                        self.loadBrands()
+                case .add_car:
+                    self.addCar()
+                case .edit_car:
+                    self.updateCar()
+                case .get_brands:
+                    self.loadBrands()
                 }
                 
             })
@@ -190,9 +212,8 @@ class AddEditViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
 } // fim da classe
-
 
 extension AddEditViewController:UIPickerViewDelegate, UIPickerViewDataSource {
     
