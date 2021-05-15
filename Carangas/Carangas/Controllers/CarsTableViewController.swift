@@ -12,7 +12,6 @@ class CarsTableViewController: UITableViewController {
 
     var cars: [Car] = []
     
-    
     var label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -24,7 +23,6 @@ class CarsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         label.text = NSLocalizedString("Carregando dados...", comment: "")
-        
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
@@ -46,7 +44,6 @@ class CarsTableViewController: UITableViewController {
                     // TODO setar o background
                     self.label.text = "Sem dados"
                     self.tableView.backgroundView = self.label
-                    
                     
                 }
                 
@@ -88,7 +85,6 @@ class CarsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         loadData()
     }
 

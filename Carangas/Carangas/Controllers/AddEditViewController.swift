@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum CarOperationAction {
     case add_car
@@ -138,8 +139,6 @@ class AddEditViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func addEdit(_ sender: UIButton) {
         
         if car == nil {
@@ -166,11 +165,9 @@ class AddEditViewController: UIViewController {
     
     // 2 - essa função pode fazer um Back na navegação da Navigation Control
     func goBack() {
-        
         DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
     
     func showAlert(withTitle titleMessage: String, withMessage message: String, isTryAgain hasRetry: Bool, operation oper: CarOperationAction) {
@@ -179,7 +176,6 @@ class AddEditViewController: UIViewController {
             DispatchQueue.main.async {
                 // ? // vamos precisar usar uma animacao
             }
-            
         }
         
         let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: .actionSheet)
