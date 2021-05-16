@@ -62,8 +62,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "addCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "updateCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,9 +94,401 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "updateCar()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/AddEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "showAlert(withTitle:withMessage:isTryAgain:operation:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - f25f2ee2e683d3a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carangas.AddEditViewController.showAlert(withTitle: Swift.String, withMessage: Swift.String, isTryAgain: Swift.Bool, operation: Carangas.CarOperationAction) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/AddEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "850">
+               </Location>
+               <Location
+                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - bea390e86c3e8fcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in Carangas.AddEditViewController.showAlert(withTitle: Swift.String, withMessage: Swift.String, isTryAgain: Swift.Bool, operation: Carangas.CarOperationAction) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/AddEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "518A8746-308C-4800-AC78-D3566C03882D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "518A8746-308C-4800-AC78-D3566C03882D - dea1d8f25427d755"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carangas.CarsTableViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "518A8746-308C-4800-AC78-D3566C03882D - e139d072a1d94263"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Carangas.CarsTableViewController.tableView(_: __C.UITableView, commit: __C.UITableViewCellEditingStyle, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "317">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4BF2CFF7-289E-438D-B2C6-D830BAC5C304"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A20185F-3320-49B8-915A-1E6F128891B0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51141BDF-CEAC-448C-A5D2-9B41FC41A51F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B18BBBBB-E4FC-40E0-8E0E-6E9D579EF200"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B18BBBBB-E4FC-40E0-8E0E-6E9D579EF200 - 87e076c80e70052c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carangas.CarsTableViewController.loadData() -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "B18BBBBB-E4FC-40E0-8E0E-6E9D579EF200 - 9b3ffefa4b883995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Carangas.Car&gt;) -&gt; () in Carangas.CarsTableViewController.loadData() -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4873AFDC-F08D-4291-969A-DB4944312978"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4873AFDC-F08D-4291-969A-DB4944312978 - 9b3ffefa4b883f85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Carangas.Car&gt;) -&gt; () in Carangas.CarsTableViewController.loadData() -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "719">
+               </Location>
+               <Location
+                  uuid = "4873AFDC-F08D-4291-969A-DB4944312978 - c27914533f6826bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (Swift.Array&lt;Carangas.Car&gt;) -&gt; () in Carangas.CarsTableViewController.loadData() -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/CarsTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F075D02F-886F-4281-A7A9-5E3B2E0BF858"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/CarsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13953D1D-2C90-4A14-BBBE-47AE9D4E2262"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/AddEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "addCar()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30F39E53-7125-4BE6-94DA-F179B644A9F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/AddEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "goBack()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C980289D-1CE4-4B9C-9AF7-5BFABC9CF9EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/ALAMOFIRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFA3816C-2334-4E53-8CFC-8E51A1359BB5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/ALAMOFIRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/ALAMOFIRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "po car">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 8b43501729cc72f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Carangas.ALAMOFIRE.(applyOperation in _4D0287A84C825575A752BB5DDC6CDCE0)(car: Carangas.Car, operation: Carangas.RESTOperation, onComplete: (Swift.Bool) -&gt; (), onError: (Carangas.CarError) -&gt; ()) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/ALAMOFIRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "1634">
+               </Location>
+               <Location
+                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 1b7bd1d9d39c6965"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in static Carangas.ALAMOFIRE.(applyOperation in _4D0287A84C825575A752BB5DDC6CDCE0)(car: Carangas.Car, operation: Carangas.RESTOperation, onComplete: (Swift.Bool) -&gt; (), onError: (Carangas.CarError) -&gt; ()) -&gt; ()"
+                  moduleName = "Carangas"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/ALAMOFIRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB3A9B09-CF5F-42A5-BB48-9AFA6C36130C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carangas/Controllers/ALAMOFIRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,9 +1,8 @@
 //
-//  REST.swift
+//  ALAMOFIRE.swift
 //  Carangas
 //
-//  Created by Douglas Frari on 5/10/21.
-//  Copyright © 2021 Eric Brito. All rights reserved.
+//  Created by RENATA Frari on 5/14/21.
 //
 
 import Alamofire
@@ -163,52 +162,51 @@ class ALAMOFIRE {
                 }
             }
         } //fim do loadCars
- 
+        
     }
     
-    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void ) {
+    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void) {
         
         // o endpoint do servidor para update é: URL/id
         let urlString = basePath + "/" + (car._id ?? "")
+        
+        var httpMethod: HTTPMethod? = nil
+        
+        switch operation {
+        case .delete:
+            httpMethod = .delete
+        case .save:
+            httpMethod = .post
+        case .update:
+            httpMethod = .put
+        }
         
         guard let url = URL(string: urlString) else {
             onComplete(false)
             return
         }
-        var request = URLRequest(url: url)
-        var httpMethod: String = ""
         
-        switch operation {
-        case .delete:
-            httpMethod = "DELETE"
-        case .save:
-            httpMethod = "POST"
-        case .update:
-            httpMethod = "PUT"
-        }
-        request.httpMethod = httpMethod
-        
-        // transformar objeto para um JSON, processo contrario do decoder -> Encoder
-        guard let json = try? JSONEncoder().encode(car) else {
+        guard (try? JSONEncoder().encode(car)) != nil else {
             onComplete(false)
             return
         }
-        request.httpBody = json
         
-        session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
-            if error == nil {
-                // verificar e desembrulhar em uma unica vez
-                guard let response = response as? HTTPURLResponse, response.statusCode == 200, let _ = data else {
-                    onComplete(false)
-                    return
-                }
-                onComplete(true)
-                
-            } else {
+        AF.request(url, method: httpMethod!, parameters: car, encoder: JSONParameterEncoder.default).response { response in
+            
+            if response.error != nil {
                 onComplete(false)
+            } else {
+                switch response.result {
+                case .success( _):
+                    if response.response?.statusCode == 200 {
+                        onComplete(true) // SUCESSO
+                    }
+                    onComplete(false)
+                case .failure( _):
+                    onComplete(false)
+                }
             }
             
-        }.resume()
-        
+        }
     }
 }

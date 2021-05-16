@@ -10,10 +10,8 @@ import UIKit
 import SideMenu
 
 class CarsTableViewController: UITableViewController {
-    
     var cars: [Car] = []
-    
-    
+        
     var label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -41,7 +39,6 @@ class CarsTableViewController: UITableViewController {
         
         label.text = NSLocalizedString("Carregando dados...", comment: "")
         
-        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
         tableView.refreshControl = refreshControl
@@ -65,7 +62,6 @@ class CarsTableViewController: UITableViewController {
                     self.label.text = "Sem dados"
                     self.tableView.backgroundView = self.label
                     
-                    
                 }
                 
             } else {
@@ -79,34 +75,58 @@ class CarsTableViewController: UITableViewController {
             }
             
         }) { (error) in
-            
-            var response: String = ""
-            
-            switch error {
-            case .invalidJSON:
-                response = "invalidJSON"
-            case .noData:
-                response = "noData"
-            case .noResponse:
-                response = "noResponse"
-            case .url:
-                response = "JSON inválido"
-            case .taskError(let error):
-                response = "\(error.localizedDescription)"
-            case .responseStatusCode(let code):
-                if code != 200 {
-                    response = "Algum problema com o servidor. :( \nError:\(code)"
-                }
-            }
-            
-            print(response)
-            
+        
+            self.errorHandler(error)
         }
     }
     
+    fileprivate func errorHandler(_ error: CarError) {
+        var response: String = ""
+        
+        switch error {
+        case .invalidJSON:
+            response = "invalidJSON"
+        case .noData:
+            response = "noData"
+        case .noResponse:
+            response = "noResponse"
+        case .url:
+            response = "JSON inválido"
+        case .taskError(let error):
+            response = "\(error.localizedDescription)"
+        case .responseStatusCode(let code):
+            if code != 200 {
+                response = "Algum problema com o servidor. :( \nError:\(code)"
+            }
+        }
+        
+        print(response)
+    }
+    
+    func showAlert(withTitle titleMessage: String, withMessage message: String, isTryAgain hasRetry: Bool) {
+        
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: .actionSheet)
+        
+        if hasRetry {
+            let tryAgainAction = UIAlertAction(title: "Tentar novamente", style: .default, handler: {(action: UIAlertAction) in
+                self.loadData()
+            })
+            alert.addAction(tryAgainAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: {(action: UIAlertAction) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            alert.addAction(cancelAction)
+        }
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         loadData()
     }
     
@@ -165,7 +185,7 @@ class CarsTableViewController: UITableViewController {
             
             let car = cars[indexPath.row]
             
-            ALAMOFIRE.delete(car: car) { success in
+            ALAMOFIRE.delete(car: car) { (success) in
                 if success {
                     // remover da estrutura local antes de atualizar
                     self.cars.remove(at: indexPath.row)
@@ -175,13 +195,10 @@ class CarsTableViewController: UITableViewController {
                         tableView.deleteRows(at: [indexPath], with: .fade)
                     }                    
                     
-                } else {
-                    // TODO mostrar algo para o usuario
                 }
             }
         }
     }
-    
     
     /*
      // Override to support rearranging the table view.
