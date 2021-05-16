@@ -65,6 +65,29 @@ class AddEditViewController: UIViewController {
         loadBrands()
     }
     
+    fileprivate func errorHandler(_ error: CarError) {
+        var response: String = ""
+        
+        switch error {
+        case .invalidJSON:
+            response = "invalidJSON"
+        case .noData:
+            response = "noData"
+        case .noResponse:
+            response = "noResponse"
+        case .url:
+            response = "JSON inválido"
+        case .taskError(let error):
+            response = "\(error.localizedDescription)"
+        case .responseStatusCode(let code):
+            if code != 200 {
+                response = "Algum problema com o servidor. :( \nError:\(code)"
+            }
+        }
+        
+        print(response)
+    }
+    
     func loadBrands() {
         ALAMOFIRE.loadBrands(onComplete: { (brands) in
             guard let brands = brands else {return}
@@ -78,29 +101,11 @@ class AddEditViewController: UIViewController {
             
         }) { (error) in
             
-            var response: String = ""
-            
-            switch error {
-            case .invalidJSON:
-                response = "invalidJSON"
-            case .noData:
-                response = "noData"
-            case .noResponse:
-                response = "noResponse"
-            case .url:
-                response = "JSON inválido"
-            case .taskError(let error):
-                response = "\(error.localizedDescription)"
-            case .responseStatusCode(let code):
-                if code != 200 {
-                    response = "Algum problema com o servidor. :( \nError:\(code)"
-                }
-            }
-            
-            print(response)
+            self.errorHandler(error)
             
         }
     }
+    
     
     // Precisamos adicionar dois selectors para serem usados pela toolbar :
     @objc func cancel() {
@@ -126,7 +131,6 @@ class AddEditViewController: UIViewController {
         }
     }
     
-    
     fileprivate func updateCar() {
         // 2 - edit current car
         ALAMOFIRE.update(car: car) { (success) in
@@ -137,7 +141,6 @@ class AddEditViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func addEdit(_ sender: UIButton) {
         
@@ -151,7 +154,7 @@ class AddEditViewController: UIViewController {
         if tfPrice.text!.isEmpty {
             tfPrice.text = "0"
         }
-        car.price = Double(tfPrice.text!)!
+        car.price = Double(tfPrice.text!) ?? 0.0
         car.gasType = scGasType.selectedSegmentIndex
         
         // 1 diferenciar se estamos salvando (SAVE) ou editando (UPDATE)

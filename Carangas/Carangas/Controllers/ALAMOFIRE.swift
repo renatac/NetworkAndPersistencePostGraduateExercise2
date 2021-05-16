@@ -165,10 +165,10 @@ class ALAMOFIRE {
         
     }
     
-    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void ) {
+    private class func applyOperation(car: Car, operation: RESTOperation , onComplete: @escaping (Bool) -> Void, onError: @escaping (CarError) -> Void) {
         
         // o endpoint do servidor para update é: URL/id
-        var urlString = basePath + "/" + (car._id ?? "")
+        let urlString = basePath + "/" + (car._id ?? "")
         
         var httpMethod: HTTPMethod? = nil
         

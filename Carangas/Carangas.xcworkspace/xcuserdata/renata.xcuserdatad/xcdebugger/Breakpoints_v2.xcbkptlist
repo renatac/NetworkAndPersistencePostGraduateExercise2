@@ -62,8 +62,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "addCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "updateCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "updateCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,13 +110,13 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "showAlert(withTitle:withMessage:isTryAgain:operation:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - f25f2ee2e683d3e0"
+                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - f25f2ee2e683d3a2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -126,12 +126,12 @@
                   urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/AddEditViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
                   offsetFromSymbolStart = "850">
                </Location>
                <Location
-                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - bea390e86c3e8f95"
+                  uuid = "16D3DEE4-816B-4612-8468-0CDAE167D889 - bea390e86c3e8fcb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -141,8 +141,8 @@
                   urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/AddEditViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "187"
-                  endingLineNumber = "187"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
                   offsetFromSymbolStart = "42">
                </Location>
             </Locations>
@@ -158,8 +158,8 @@
             filePath = "Carangas/Controllers/CarsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
             <Locations>
@@ -222,8 +222,8 @@
             filePath = "Carangas/Controllers/CarsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "Carangas/Controllers/CarsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -343,22 +343,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "70AAE906-831B-4314-8039-ECCA630ADE14"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Carangas/Controllers/CarsTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "loadData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F075D02F-886F-4281-A7A9-5E3B2E0BF858"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -382,8 +366,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "addCar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,8 +382,8 @@
             filePath = "Carangas/Controllers/AddEditViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "goBack()"
             landmarkType = "7">
          </BreakpointContent>
@@ -416,8 +400,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
             endingLineNumber = "196"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -432,8 +416,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "184"
             endingLineNumber = "184"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -448,8 +432,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "194"
             endingLineNumber = "194"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
@@ -460,7 +444,7 @@
             </Actions>
             <Locations>
                <Location
-                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 8b43501729cc7182"
+                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 8b43501729cc72f9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -470,12 +454,12 @@
                   urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/ALAMOFIRE.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "215"
-                  endingLineNumber = "215"
-                  offsetFromSymbolStart = "2058">
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "1634">
                </Location>
                <Location
-                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 1b7bd1d9d39c6c6c"
+                  uuid = "BB3F54C0-0C07-4063-B22D-7B18B65C82E6 - 1b7bd1d9d39c6965"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -485,8 +469,8 @@
                   urlString = "file:///Users/renata/Documents/iOSNetworkPersistencia-Entregas/Exercicio2/Carangas/Carangas/Controllers/ALAMOFIRE.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
+                  startingLineNumber = "196"
+                  endingLineNumber = "196"
                   offsetFromSymbolStart = "209">
                </Location>
             </Locations>
@@ -504,8 +488,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "applyOperation(car:operation:onComplete:onError:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
