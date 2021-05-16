@@ -9,5 +9,6 @@ target 'Carangas' do
 
 pod 'Alamofire'
 pod 'SwiftyJSON', '~> 4.0'
+pod 'SideMenu'
 
 end
